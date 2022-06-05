@@ -29,7 +29,7 @@ router.get("/parts/:id", (req, res) => {
 
 	const part = storeParts.find((p) => p.id === id);
 	setTimeout(() => {
-		res.send(part);
+		res.send(part || null);
 	}, delay);
 });
 
